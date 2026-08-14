@@ -276,4 +276,4 @@ export const copy = {
 } as const;
 
 export const CONTACT_EMAIL =
-  import.meta.env.VITE_CONTACT_EMAIL?.trim() || 'hello@yvars.ai';
+  import.meta.env.VITE_CONTACT_EMAIL?.trim() || 'contact@yvars.io';
