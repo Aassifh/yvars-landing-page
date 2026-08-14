@@ -1,5 +1,6 @@
 import { type FormEvent, type InputHTMLAttributes, useState } from 'react';
 import { copy, CONTACT_EMAIL } from '../copy/fr';
+import SectionHeading from './SectionHeading';
 
 export default function Contact() {
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent'>('idle');
@@ -31,16 +32,17 @@ export default function Contact() {
         : copy.contact.privacy;
 
   return (
-    <section id="contact" className="reveal scroll-mt-28 py-16 lg:py-24 xl:py-32">
-      <div className="page-shell grid gap-12 lg:grid-cols-2 xl:gap-20">
+    <section
+      id="contact"
+      className="reveal scroll-mt-28 border-t border-border bg-white py-20 lg:py-28"
+    >
+      <div className="page-shell grid gap-12 lg:grid-cols-2 lg:gap-16">
         <div>
-          <p className="text-sm font-semibold tracking-wide text-primary">{copy.contact.eyebrow}</p>
-          <h2 className="mt-3 text-[clamp(1.75rem,2.4vw+1rem,3rem)] font-semibold tracking-tight text-foreground">
-            {copy.contact.title}
-          </h2>
-          <p className="mt-4 max-w-md text-base leading-relaxed text-muted">
-            {copy.contact.subtitle}
-          </p>
+          <SectionHeading
+            eyebrow={copy.contact.eyebrow}
+            title={copy.contact.title}
+            subtitle={copy.contact.subtitle}
+          />
           <ul className="mt-8 space-y-3">
             {copy.contact.points.map((point) => (
               <li key={point} className="flex gap-3 text-sm leading-relaxed text-foreground">
@@ -51,11 +53,7 @@ export default function Contact() {
           </ul>
         </div>
 
-        <form
-          className="rounded-2xl border border-border bg-card p-6 shadow-sm sm:p-8"
-          onSubmit={onSubmit}
-          noValidate={false}
-        >
+        <form className="surface p-6 sm:p-8" onSubmit={onSubmit} noValidate={false}>
           <div className="space-y-4">
             <Field id="name" name="name" label={copy.contact.name} autoComplete="name" required />
             <Field

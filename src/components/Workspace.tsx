@@ -1,43 +1,30 @@
-import { AudioLines, ClipboardList, GitCompare, MessagesSquare } from 'lucide-react';
 import { copy } from '../copy/fr';
-
-const icons = [ClipboardList, AudioLines, MessagesSquare, GitCompare];
+import SectionHeading from './SectionHeading';
 
 export default function Workspace() {
   return (
-    <section id="espace" className="reveal scroll-mt-28 py-16 lg:py-24 xl:py-32">
+    <section id="espace" className="reveal scroll-mt-28 py-20 lg:py-28">
       <div className="page-shell">
-        <p className="text-sm font-semibold tracking-wide text-primary">{copy.workspace.eyebrow}</p>
-        <h2 className="mt-3 max-w-3xl text-[clamp(1.75rem,2.4vw+1rem,3rem)] font-semibold tracking-tight text-foreground">
-          {copy.workspace.title}
-        </h2>
-        <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted xl:max-w-3xl">
-          {copy.workspace.subtitle}
-        </p>
+        <SectionHeading
+          eyebrow={copy.workspace.eyebrow}
+          title={copy.workspace.title}
+          subtitle={copy.workspace.subtitle}
+        />
 
-        <ol className="mt-12 grid gap-4 sm:grid-cols-2">
-          {copy.workspace.items.map((item, index) => {
-            const Icon = icons[index] ?? ClipboardList;
-            return (
-              <li
-                key={item.title}
-                className="flex gap-4 rounded-2xl border border-border bg-card p-6 shadow-sm sm:p-7"
-              >
-                <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-accent text-primary">
-                  <Icon className="size-5" aria-hidden />
-                </div>
-                <div>
-                  <p className="font-mono text-xs font-semibold tracking-wide text-primary">
-                    {String(index + 1).padStart(2, '0')}
-                  </p>
-                  <h3 className="mt-2 text-lg font-semibold tracking-tight text-foreground">
-                    {item.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted">{item.body}</p>
-                </div>
-              </li>
-            );
-          })}
+        <ol className="surface mt-12 grid overflow-hidden sm:grid-cols-2 lg:grid-cols-4">
+          {copy.workspace.items.map((item, index) => (
+            <li
+              key={item.title}
+              className={`px-6 py-8 ${index < 2 ? 'border-b border-border lg:border-b-0' : ''} ${
+                index % 2 === 0 ? 'sm:border-r sm:border-border' : ''
+              } ${index < 3 ? 'lg:border-r lg:border-border' : ''}`}
+            >
+              <h3 className="text-base font-semibold tracking-tight text-foreground">
+                {item.title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted">{item.body}</p>
+            </li>
+          ))}
         </ol>
       </div>
     </section>

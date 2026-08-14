@@ -1,4 +1,5 @@
 import { copy } from '../copy/fr';
+import Logo from './Logo';
 
 const links = [
   { href: '#produit', label: copy.nav.product },
@@ -11,18 +12,21 @@ const links = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-border py-12 xl:py-16">
+    <footer className="border-t border-border py-12 lg:py-16">
       <div className="page-shell flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
         <div>
-          <p className="text-sm font-semibold tracking-tight text-foreground">YVARS</p>
-          <p className="mt-2 max-w-sm text-sm leading-relaxed text-muted">{copy.footer.blurb}</p>
+          <div className="flex items-center gap-2.5">
+            <Logo className="h-8 w-auto" />
+            <p className="text-sm font-semibold tracking-tight text-foreground">YVARS</p>
+          </div>
+          <p className="mt-3 max-w-sm text-sm leading-relaxed text-muted">{copy.footer.blurb}</p>
         </div>
-        <nav aria-label="Pied de page" className="flex flex-wrap gap-x-5 gap-y-2">
+        <nav aria-label="Pied de page" className="flex flex-wrap gap-x-6 gap-y-2">
           {links.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="cursor-pointer text-sm font-medium text-muted transition-colors duration-200 hover:text-foreground"
+              className="inline-flex min-h-11 cursor-pointer items-center text-sm font-medium text-muted transition-colors duration-200 hover:text-foreground"
             >
               {item.label}
             </a>

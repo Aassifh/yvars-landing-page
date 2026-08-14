@@ -2,6 +2,8 @@
 
 Standalone French marketing site for YVARS. Isolated from the product app: no login, no admin, no LiveKit.
 
+Live: [https://aassifh.github.io/yvars-landing-page/](https://aassifh.github.io/yvars-landing-page/) (GitHub Pages). Point a custom domain here from GoDaddy after DNS is set.
+
 Single CTA: **Demander une démo**.
 
 ## Run

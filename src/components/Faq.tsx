@@ -1,22 +1,24 @@
 import { ChevronDown } from 'lucide-react';
 import { copy } from '../copy/fr';
+import SectionHeading from './SectionHeading';
 
 export default function Faq() {
   return (
-    <section id="faq" className="reveal scroll-mt-28 py-16 lg:py-24 xl:py-32">
-      <div className="page-shell max-w-3xl xl:max-w-4xl">
-        <p className="text-sm font-semibold tracking-wide text-primary">{copy.faq.eyebrow}</p>
-        <h2 className="mt-3 text-[clamp(1.75rem,3vw,2.35rem)] font-semibold tracking-tight text-foreground">
-          {copy.faq.title}
-        </h2>
+    <section id="faq" className="reveal scroll-mt-28 py-20 lg:py-28">
+      <div className="page-shell max-w-3xl">
+        <SectionHeading eyebrow={copy.faq.eyebrow} title={copy.faq.title} tight />
 
-        <div className="mt-10 divide-y divide-border rounded-2xl border border-border bg-card">
+        <div className="mt-10 space-y-3">
           {copy.faq.items.map((item) => (
-            <details key={item.q} name="faq" className="group px-5">
+            <details
+              key={item.q}
+              name="faq"
+              className="surface group px-5 transition-colors duration-200 open:border-primary/25"
+            >
               <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 py-4 text-left text-base font-semibold tracking-tight text-foreground transition-colors duration-200 hover:text-primary [&::-webkit-details-marker]:hidden">
                 {item.q}
                 <ChevronDown
-                  className="size-5 shrink-0 text-muted transition-transform duration-200 group-open:rotate-180"
+                  className="size-5 shrink-0 text-muted transition-transform duration-200 group-open:rotate-180 motion-reduce:transition-none"
                   aria-hidden
                 />
               </summary>

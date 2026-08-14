@@ -1,21 +1,20 @@
 import { Lightbulb, Package, Shield, Smartphone, Store, Tag } from 'lucide-react';
 import { copy } from '../copy/fr';
+import SectionHeading from './SectionHeading';
 
 const icons = [Package, Store, Smartphone, Shield, Tag, Lightbulb];
 
 export default function UseCases() {
   return (
-    <section id="cas-usage" className="reveal scroll-mt-28 py-16 lg:py-24 xl:py-32">
+    <section id="cas-usage" className="reveal scroll-mt-28 py-20 lg:py-28">
       <div className="page-shell">
-        <p className="text-sm font-semibold tracking-wide text-primary">{copy.useCases.eyebrow}</p>
-        <h2 className="mt-3 max-w-3xl text-[clamp(1.75rem,2.4vw+1rem,3rem)] font-semibold tracking-tight text-foreground">
-          {copy.useCases.title}
-        </h2>
-        <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted xl:max-w-3xl">
-          {copy.useCases.subtitle}
-        </p>
+        <SectionHeading
+          eyebrow={copy.useCases.eyebrow}
+          title={copy.useCases.title}
+          subtitle={copy.useCases.subtitle}
+        />
 
-        <div className="mt-10 flex flex-col gap-5 rounded-2xl border border-border bg-card p-6 shadow-sm sm:flex-row sm:items-center sm:justify-between sm:gap-8 sm:p-7">
+        <div className="surface mt-10 flex flex-col gap-6 p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
           <div className="max-w-xl">
             <p className="text-base font-semibold tracking-tight text-foreground">
               {copy.useCases.languages.title}
@@ -28,7 +27,7 @@ export default function UseCases() {
                 key={lang.code}
                 lang={lang.code}
                 dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
-                className="rounded-full border border-border bg-accent px-3.5 py-2 text-sm font-medium text-primary"
+                className="chip text-primary"
               >
                 {lang.native}
               </li>
@@ -36,15 +35,15 @@ export default function UseCases() {
           </ul>
         </div>
 
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
           {copy.useCases.clusters.map((cluster, index) => {
             const Icon = icons[index] ?? Package;
             return (
               <article
                 key={cluster.title}
-                className="flex flex-col rounded-2xl border border-border bg-card p-6 shadow-sm"
+                className="surface flex flex-col p-6 transition-colors duration-200 hover:border-slate-300"
               >
-                <div className="flex size-11 items-center justify-center rounded-xl bg-accent text-primary">
+                <div className="icon-well">
                   <Icon className="size-5" aria-hidden />
                 </div>
                 <h3 className="mt-5 text-lg font-semibold tracking-tight text-foreground">
@@ -53,10 +52,7 @@ export default function UseCases() {
                 <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{cluster.description}</p>
                 <ul className="mt-4 flex flex-wrap gap-2">
                   {cluster.chips.map((chip) => (
-                    <li
-                      key={chip}
-                      className="rounded-full bg-accent px-3 py-1 text-xs font-medium text-primary"
-                    >
+                    <li key={chip} className="chip text-primary">
                       {chip}
                     </li>
                   ))}

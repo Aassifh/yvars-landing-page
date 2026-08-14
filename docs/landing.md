@@ -31,16 +31,19 @@ YVARS is a qualitative research workspace: adaptive **voice** interviews (French
 ## Layout Overrides
 
 - **Max Width:** `page-shell` content, full-width section backgrounds
-- **Nav:** Floating glass bar (`top-4 left-4 right-4`), `bg-white/80` + `backdrop-blur`, `border-gray-200`
+- **Nav:** Floating glass bar (`bg-white/80` + `backdrop-blur`), visible `border-gray-200`
+- **Style:** Swiss / minimal — white space, one indigo accent, high contrast, no neumorphism
 - **Sections:** Hero (type-led) → Sticky product story → Use cases → Audience → Workspace (livrables) → Why → FAQ → Contact → Footer
-- **Spine:** One sticky product window on all breakpoints. Content morphs with scroll (Concevoir → Croiser). Mobile: pinned under the nav; desktop: pinned in the right column.
+- **Spine:** Sticky product window with a fixed height and no inner scroll. Steps sit beside it as a timeline (titles + rail), not a numbered 01–05 stack. Page scroll updates the window.
 - **CTA:** Sticky in nav + hero + contact. No secondary login CTA.
 
 ## Typography Overrides
 
 - **Font:** Geist Variable (match product UI). Do **not** use Plus Jakarta Sans from MASTER.md.
-- **Headings:** Oversized, tight tracking (`tracking-tight`), clamp for hero (`clamp(2.25rem, 6vw, 4.5rem)`)
-- **Body:** Slate-900 `#0F172A` for text, slate-600 `#475569` minimum for muted
+- **Headings:** Modular scale. Hero h1 `clamp(2.5rem, 5vw + 0.5rem, 5.25rem)`. Section h2 max `2.5rem`. Beat titles stay below h1 (`text-2xl` / `text-3xl`).
+- **Body:** 17px (`1.0625rem`) / 1.6. Slate-900 `#0F172A` for text, slate-600 `#475569` minimum for muted
+- **Rhythm:** 8px grid. Sections `py-20 lg:py-28`. Gaps `gap-4 / 6 / 8`.
+- **Stacking:** skip `z-50`, nav `z-40`, mobile dock `z-30`, sticky canvas `z-20`, content `z-10`, grain behind (`body::before`)
 
 ## Color Overrides
 
@@ -57,7 +60,7 @@ Light mode only. No dark-by-default.
 
 ## Style
 
-Editorial / Swiss restraint inspired by Askverso **structure**, not a clone: generous whitespace, 4-step how-it-works, use-case chips, comparison table, FAQ. Glass only on the nav (opacity ≥ 80%). No emoji icons (Lucide only).
+Swiss / International: grid, whitespace, Geist, single indigo accent. Cards are white with a visible border. No extruded shadows, no decorative orbs. No emoji icons (Lucide only).
 
 ## Interaction
 

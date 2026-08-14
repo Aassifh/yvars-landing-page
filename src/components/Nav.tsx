@@ -2,6 +2,7 @@ import { useEffect, useId, useRef, useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { copy } from '../copy/fr';
 import { useActiveSection } from '../lib/useActiveSection';
+import Logo from './Logo';
 
 const links = [
   { href: '#produit', id: 'produit', label: copy.nav.product },
@@ -43,24 +44,25 @@ export default function Nav() {
   }, [open]);
 
   return (
-    <header className="pointer-events-none fixed inset-x-0 top-0 z-40 pt-3 sm:pt-4 xl:pt-5">
+    <header className="pointer-events-none fixed inset-x-0 top-0 z-40 pt-3 sm:pt-4">
       <div
-        className={`page-shell pointer-events-auto flex items-center justify-between gap-3 rounded-2xl border bg-white/80 px-3 backdrop-blur-md transition-[padding,box-shadow,border-color] duration-200 sm:px-4 ${
-          scrolled
-            ? 'border-border py-2.5 shadow-md'
-            : 'border-border/70 py-3 shadow-sm'
+        className={`page-shell pointer-events-auto flex items-center justify-between gap-4 rounded-2xl border border-border bg-white/80 px-3 backdrop-blur-md transition-[padding,box-shadow] duration-200 sm:px-4 ${
+          scrolled ? 'py-2.5 shadow-sm' : 'py-3'
         }`}
       >
-        <a href="#top" className="shrink-0 cursor-pointer leading-tight">
-          <span className="block text-[10px] font-medium tracking-[0.14em] text-muted uppercase">
-            YVARS
-          </span>
-          <span className="block text-sm font-semibold tracking-tight text-foreground">
-            Research
+        <a
+          href="#top"
+          className="flex shrink-0 cursor-pointer items-center gap-2.5"
+          aria-label="YVARS, haut de page"
+        >
+          <Logo />
+          <span className="flex items-baseline gap-2">
+            <span className="text-sm font-semibold tracking-tight text-foreground">YVARS</span>
+            <span className="hidden text-xs font-medium text-muted sm:inline">Research</span>
           </span>
         </a>
 
-        <nav className="hidden items-center gap-0.5 lg:flex" aria-label="Sections">
+        <nav className="hidden items-center gap-1 lg:flex" aria-label="Sections">
           {links.map((item) => {
             const isActive = active === item.id;
             return (
@@ -79,13 +81,13 @@ export default function Nav() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <a href="#contact" className="btn-primary hidden sm:inline-flex">
+          <a href="#contact" className="btn-primary hidden lg:inline-flex">
             {copy.nav.cta}
           </a>
           <button
             ref={buttonRef}
             type="button"
-            className="inline-flex size-11 cursor-pointer items-center justify-center rounded-xl border border-border text-foreground transition-colors duration-200 hover:bg-accent lg:hidden"
+            className="inline-flex size-11 cursor-pointer items-center justify-center rounded-xl border border-border bg-card text-foreground transition-colors duration-200 hover:bg-accent lg:hidden"
             aria-expanded={open}
             aria-controls={menuId}
             onClick={() => setOpen((v) => !v)}
@@ -99,14 +101,14 @@ export default function Nav() {
       {open ? (
         <div
           id={menuId}
-          className="page-shell pointer-events-auto mt-2 rounded-2xl border border-border bg-white/95 p-3 shadow-md backdrop-blur-md lg:hidden"
+          className="page-shell pointer-events-auto mt-2 rounded-2xl border border-border bg-white/95 p-3 shadow-sm backdrop-blur-md lg:hidden"
         >
-          <nav className="flex flex-col gap-1" aria-label="Sections mobile">
+          <nav className="flex flex-col gap-2" aria-label="Sections mobile">
             {links.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="min-h-11 cursor-pointer rounded-xl px-3 py-3 text-sm font-medium text-foreground transition-colors duration-200 hover:bg-accent"
+                className="min-h-11 cursor-pointer rounded-xl px-3 py-3 text-sm font-medium text-foreground transition-colors duration-200 hover:bg-accent hover:text-primary"
                 onClick={() => setOpen(false)}
               >
                 {item.label}

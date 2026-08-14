@@ -5,17 +5,17 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-[92svh] flex-col justify-center overflow-x-clip py-28 sm:py-32"
+      className="relative flex min-h-[88svh] flex-col justify-center overflow-x-clip py-28 sm:py-32"
     >
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_70%_45%_at_50%_-8%,_oklch(0.94_0.04_264)_0%,_transparent_68%)]"
       />
       <div className="page-shell">
-        <p className="text-sm font-semibold tracking-[0.18em] text-primary uppercase">
+        <p className="text-xs font-semibold tracking-[0.16em] text-primary uppercase">
           {copy.hero.eyebrow}
         </p>
-        <h1 className="mt-6 max-w-[16ch] text-[clamp(2.75rem,5.4vw+1rem,8.75rem)] leading-[0.9] font-semibold tracking-[-0.055em] text-foreground">
+        <h1 className="mt-5 max-w-[16ch] text-[clamp(2.5rem,5vw+0.5rem,5.25rem)] leading-[1.04] font-semibold tracking-[-0.04em] text-foreground">
           {copy.hero.lines.map((line, index) => (
             <span
               key={line}
@@ -25,17 +25,17 @@ export default function Hero() {
             </span>
           ))}
         </h1>
-        <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl 2xl:max-w-3xl 2xl:text-2xl">
+        <p className="mt-6 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
           {copy.hero.subtitle}
         </p>
-        <p className="mt-4 text-sm font-medium tracking-tight text-foreground sm:text-base">
+        <p className="mt-4 text-sm font-medium tracking-tight text-foreground">
           {copy.hero.languages}
         </p>
-        <div className="mt-10 flex flex-wrap items-center gap-5">
+        <div className="mt-10 flex flex-wrap items-center gap-4">
           <a href="#contact" className="btn-primary">
             {copy.hero.cta}
           </a>
-          <a href="#produit" className="btn-ghost gap-1.5">
+          <a href="#produit" className="btn-ghost gap-2">
             {copy.hero.secondary}
             <ArrowDown className="size-4" aria-hidden />
           </a>
