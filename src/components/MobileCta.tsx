@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import { copy } from '../copy/fr';
+import { useLocale } from '../lib/LocaleContext';
 
 export default function MobileCta() {
+  const { copy } = useLocale();
   const [hidden, setHidden] = useState(false);
 
   useEffect(() => {

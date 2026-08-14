@@ -1,27 +1,28 @@
-import { copy } from '../copy/fr';
+import { useLocale } from '../lib/LocaleContext';
 import Logo from './Logo';
 
-const links = [
-  { href: '#produit', label: copy.nav.product },
-  { href: '#cas-usage', label: copy.nav.useCases },
-  { href: '#pour-qui', label: copy.nav.audience },
-  { href: '#pourquoi', label: copy.nav.why },
-  { href: '#faq', label: copy.nav.faq },
-  { href: '#contact', label: copy.nav.cta },
-] as const;
-
 export default function Footer() {
+  const { copy } = useLocale();
+  const links = [
+    { href: '#produit', label: copy.nav.product },
+    { href: '#cas-usage', label: copy.nav.useCases },
+    { href: '#pour-qui', label: copy.nav.audience },
+    { href: '#pourquoi', label: copy.nav.why },
+    { href: '#faq', label: copy.nav.faq },
+    { href: '#contact', label: copy.nav.cta },
+  ] as const;
+
   return (
     <footer className="border-t border-border py-12 lg:py-16">
       <div className="page-shell flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
         <div>
           <div className="flex items-center gap-2.5">
             <Logo className="h-8 w-auto" />
-            <p className="text-sm font-semibold tracking-tight text-foreground">YVARS</p>
+            <p className="wordmark text-sm font-semibold tracking-tight text-foreground">YVARS</p>
           </div>
           <p className="mt-3 max-w-sm text-sm leading-relaxed text-muted">{copy.footer.blurb}</p>
         </div>
-        <nav aria-label="Pied de page" className="flex flex-wrap gap-x-6 gap-y-2">
+        <nav aria-label={copy.a11y.footer} className="flex flex-wrap gap-x-6 gap-y-2">
           {links.map((item) => (
             <a
               key={item.href}

@@ -1,8 +1,10 @@
 import { type FormEvent, type InputHTMLAttributes, useState } from 'react';
-import { copy, CONTACT_EMAIL } from '../copy/fr';
+import { CONTACT_EMAIL } from '../copy';
+import { useLocale } from '../lib/LocaleContext';
 import SectionHeading from './SectionHeading';
 
 export default function Contact() {
+  const { copy } = useLocale();
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent'>('idle');
 
   const onSubmit = (event: FormEvent<HTMLFormElement>) => {
@@ -14,9 +16,13 @@ export default function Contact() {
     const org = String(data.get('org') ?? '').trim();
     const message = String(data.get('message') ?? '').trim();
 
-    const body = [`Nom : ${name}`, `Email : ${email}`, `Organisation : ${org}`, '', message].join(
-      '\n',
-    );
+    const body = [
+      `${copy.contact.name} : ${name}`,
+      `${copy.contact.email} : ${email}`,
+      `${copy.contact.org} : ${org}`,
+      '',
+      message,
+    ].join('\n');
 
     setStatus('sending');
     const href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(copy.contact.subject)}&body=${encodeURIComponent(body)}`;

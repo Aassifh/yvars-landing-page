@@ -1,10 +1,11 @@
 import { Lightbulb, Package, Shield, Smartphone, Store, Tag } from 'lucide-react';
-import { copy } from '../copy/fr';
+import { useLocale } from '../lib/LocaleContext';
 import SectionHeading from './SectionHeading';
 
 const icons = [Package, Store, Smartphone, Shield, Tag, Lightbulb];
 
 export default function UseCases() {
+  const { copy } = useLocale();
   return (
     <section id="cas-usage" className="reveal scroll-mt-28 py-20 lg:py-28">
       <div className="page-shell">

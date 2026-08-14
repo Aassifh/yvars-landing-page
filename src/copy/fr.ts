@@ -1,8 +1,16 @@
-export const copy = {
+export const fr = {
   meta: {
     title: 'YVARS · Études qualitatives vocales et intelligence de marché',
     description:
       'YVARS mène des entretiens vocaux en français, anglais et arabe, puis relie ces verbatims à l’intelligence concurrentielle. Un espace de travail pour décider, pas un deck figé.',
+  },
+  a11y: {
+    skip: 'Aller au contenu',
+    home: 'YVARS, haut de page',
+    sections: 'Sections',
+    sectionsMobile: 'Sections mobile',
+    languages: 'Langue',
+    footer: 'Pied de page',
   },
   nav: {
     product: 'Produit',
@@ -68,6 +76,13 @@ export const copy = {
       },
     ],
     canvas: {
+      panels: {
+        guide: 'Guide',
+        quotas: 'Quotas',
+        interview: 'Entretien vocal',
+        insights: 'Insights',
+        intel: 'Intelligence Lab',
+      },
       axes: ['Hydratation perçue', 'Texture & fini', 'Rapport qualité-prix'],
       quotas: [
         { label: '18–24 ans', value: '4 / 8' },
@@ -274,6 +289,3 @@ export const copy = {
     top: 'Haut de page',
   },
 } as const;
-
-export const CONTACT_EMAIL =
-  import.meta.env.VITE_CONTACT_EMAIL?.trim() || 'contact@yvars.io';

@@ -1,8 +1,10 @@
 @import 'tailwindcss';
 @import '@fontsource-variable/geist';
+@import '@fontsource-variable/noto-sans-arabic';
 
 @theme inline {
   --font-sans: 'Geist Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-arabic: 'Noto Sans Arabic Variable', 'Geist Variable', ui-sans-serif, system-ui, sans-serif;
   --color-background: #f8fafc;
   --color-foreground: #0f172a;
   --color-muted: #475569;
@@ -43,6 +45,14 @@
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+  }
+
+  html[dir='rtl'] body {
+    font-family: var(--font-arabic);
+  }
+
+  .wordmark {
+    font-family: var(--font-sans);
   }
 
   body::before {

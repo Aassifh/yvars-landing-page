@@ -1,10 +1,10 @@
 # YVARS landing page
 
-Standalone French marketing site for YVARS. Isolated from the product app: no login, no admin, no LiveKit.
+Standalone marketing site for YVARS (French, English, Arabic). Isolated from the product app: no login, no admin, no LiveKit.
 
 Live: [https://aassifh.github.io/yvars-landing-page/](https://aassifh.github.io/yvars-landing-page/) (GitHub Pages). Point a custom domain here from GoDaddy after DNS is set.
 
-Single CTA: **Demander une démo**.
+Single CTA: request a demo (`#contact`). Locale: English browsers get English; everything else defaults to French. Arabic is chosen in the nav and remembered.
 
 ## Run
 
@@ -30,6 +30,6 @@ Optional: copy `.env.example` to `.env` to set `VITE_CONTACT_EMAIL`.
 
 ## Notes
 
-- Copy lives in `src/copy/fr.ts` (French-first).
+- Copy lives in `src/copy/` (`fr.ts` is the schema source; `en.ts` and `ar.ts` match it). Locale detection is in `src/copy/index.ts`.
 - Do not add `/admin`, Google SSO, or “Se connecter”.
 - Do not claim worldwide panels, video interviews, or fake social proof.

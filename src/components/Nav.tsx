@@ -1,23 +1,25 @@
 import { useEffect, useId, useRef, useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import { copy } from '../copy/fr';
 import { useActiveSection } from '../lib/useActiveSection';
+import { useLocale } from '../lib/LocaleContext';
+import LangSwitcher from './LangSwitcher';
 import Logo from './Logo';
 
-const links = [
-  { href: '#produit', id: 'produit', label: copy.nav.product },
-  { href: '#cas-usage', id: 'cas-usage', label: copy.nav.useCases },
-  { href: '#pour-qui', id: 'pour-qui', label: copy.nav.audience },
-  { href: '#pourquoi', id: 'pourquoi', label: copy.nav.why },
-  { href: '#faq', id: 'faq', label: copy.nav.faq },
-] as const;
-
 export default function Nav() {
+  const { copy } = useLocale();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const active = useActiveSection();
   const menuId = useId();
   const buttonRef = useRef<HTMLButtonElement>(null);
+
+  const links = [
+    { href: '#produit', id: 'produit', label: copy.nav.product },
+    { href: '#cas-usage', id: 'cas-usage', label: copy.nav.useCases },
+    { href: '#pour-qui', id: 'pour-qui', label: copy.nav.audience },
+    { href: '#pourquoi', id: 'pourquoi', label: copy.nav.why },
+    { href: '#faq', id: 'faq', label: copy.nav.faq },
+  ] as const;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -53,16 +55,20 @@ export default function Nav() {
         <a
           href="#top"
           className="flex shrink-0 cursor-pointer items-center gap-2.5"
-          aria-label="YVARS, haut de page"
+          aria-label={copy.a11y.home}
         >
           <Logo />
           <span className="flex items-baseline gap-2">
-            <span className="text-sm font-semibold tracking-tight text-foreground">YVARS</span>
-            <span className="hidden text-xs font-medium text-muted sm:inline">Research</span>
+            <span className="wordmark text-sm font-semibold tracking-tight text-foreground">
+              YVARS
+            </span>
+            <span className="wordmark hidden text-xs font-medium text-muted sm:inline">
+              Research
+            </span>
           </span>
         </a>
 
-        <nav className="hidden items-center gap-1 lg:flex" aria-label="Sections">
+        <nav className="hidden items-center gap-1 lg:flex" aria-label={copy.a11y.sections}>
           {links.map((item) => {
             const isActive = active === item.id;
             return (
@@ -81,6 +87,9 @@ export default function Nav() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <div className="hidden lg:block">
+            <LangSwitcher />
+          </div>
           <a href="#contact" className="btn-primary hidden lg:inline-flex">
             {copy.nav.cta}
           </a>
@@ -103,7 +112,7 @@ export default function Nav() {
           id={menuId}
           className="page-shell pointer-events-auto mt-2 rounded-2xl border border-border bg-white/95 p-3 shadow-sm backdrop-blur-md lg:hidden"
         >
-          <nav className="flex flex-col gap-2" aria-label="Sections mobile">
+          <nav className="flex flex-col gap-2" aria-label={copy.a11y.sectionsMobile}>
             {links.map((item) => (
               <a
                 key={item.href}
@@ -114,6 +123,7 @@ export default function Nav() {
                 {item.label}
               </a>
             ))}
+            <LangSwitcher stacked onPick={() => setOpen(false)} />
             <a href="#contact" className="btn-primary mt-1 w-full" onClick={() => setOpen(false)}>
               {copy.nav.cta}
             </a>

@@ -1,8 +1,9 @@
 import { type ReactNode } from 'react';
 import { Mic } from 'lucide-react';
-import { copy } from '../copy/fr';
+import type { StoryBeatId } from '../copy';
+import { useLocale } from '../lib/LocaleContext';
 
-export type StoryBeatId = (typeof copy.story.beats)[number]['id'];
+export type { StoryBeatId };
 
 type Props = {
   beat: StoryBeatId;
@@ -10,6 +11,7 @@ type Props = {
 };
 
 export default function ProductCanvas({ beat, live = false }: Props) {
+  const { copy } = useLocale();
   const { study, live: liveLabel, canvas } = copy.story;
   const active = copy.story.beats.find((item) => item.id === beat) ?? copy.story.beats[0];
 
@@ -31,7 +33,9 @@ export default function ProductCanvas({ beat, live = false }: Props) {
 
       <div className="relative min-h-0 flex-1 overflow-hidden">
         <Panel active={beat === 'design'}>
-          <p className="text-xs font-semibold tracking-wide text-muted uppercase">Guide</p>
+          <p className="text-xs font-semibold tracking-wide text-muted uppercase">
+            {canvas.panels.guide}
+          </p>
           <p className="mt-1.5 text-base font-semibold text-foreground">{study}</p>
           <ul className="mt-3 space-y-2.5">
             {canvas.axes.map((axis) => (
@@ -44,7 +48,9 @@ export default function ProductCanvas({ beat, live = false }: Props) {
         </Panel>
 
         <Panel active={beat === 'collect'}>
-          <p className="text-xs font-semibold tracking-wide text-muted uppercase">Quotas</p>
+          <p className="text-xs font-semibold tracking-wide text-muted uppercase">
+            {canvas.panels.quotas}
+          </p>
           <ul className="mt-3 space-y-3">
             {canvas.quotas.map((row) => {
               const percent = quotaPercent(row.value);
@@ -71,7 +77,9 @@ export default function ProductCanvas({ beat, live = false }: Props) {
         </Panel>
 
         <Panel active={beat === 'interview'}>
-          <p className="text-xs font-semibold tracking-wide text-muted uppercase">Entretien vocal</p>
+          <p className="text-xs font-semibold tracking-wide text-muted uppercase">
+            {canvas.panels.interview}
+          </p>
           <div className="mt-4 flex h-14 items-end gap-1.5" aria-hidden>
             {[38, 72, 44, 92, 58, 84, 36, 68, 52, 78, 41, 90, 48, 76].map((h, i) => (
               <span
@@ -80,13 +88,15 @@ export default function ProductCanvas({ beat, live = false }: Props) {
                 style={{ height: `${Math.round(h * 0.55)}px` }}
               />
             ))}
-            <Mic className="mb-0.5 ml-2 size-4 text-primary" />
+            <Mic className="mb-0.5 ms-2 size-4 text-primary" />
           </div>
           <p className="mt-4 text-sm leading-relaxed text-foreground">{canvas.probing}</p>
         </Panel>
 
         <Panel active={beat === 'analyze'}>
-          <p className="text-xs font-semibold tracking-wide text-muted uppercase">Insights</p>
+          <p className="text-xs font-semibold tracking-wide text-muted uppercase">
+            {canvas.panels.insights}
+          </p>
           <ul className="mt-3 space-y-3">
             {canvas.insights.map((row) => (
               <li key={row.label}>
@@ -110,7 +120,9 @@ export default function ProductCanvas({ beat, live = false }: Props) {
         </Panel>
 
         <Panel active={beat === 'intel'}>
-          <p className="text-xs font-semibold tracking-wide text-muted uppercase">Intelligence Lab</p>
+          <p className="text-xs font-semibold tracking-wide text-muted uppercase">
+            {canvas.panels.intel}
+          </p>
           <blockquote className="mt-2 text-sm leading-relaxed text-foreground sm:text-base">
             « {canvas.quote} »
           </blockquote>

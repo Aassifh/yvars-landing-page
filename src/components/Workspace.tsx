@@ -1,7 +1,8 @@
-import { copy } from '../copy/fr';
+import { useLocale } from '../lib/LocaleContext';
 import SectionHeading from './SectionHeading';
 
 export default function Workspace() {
+  const { copy } = useLocale();
   return (
     <section id="espace" className="reveal scroll-mt-28 py-20 lg:py-28">
       <div className="page-shell">
@@ -16,8 +17,8 @@ export default function Workspace() {
             <li
               key={item.title}
               className={`px-6 py-8 ${index < 2 ? 'border-b border-border lg:border-b-0' : ''} ${
-                index % 2 === 0 ? 'sm:border-r sm:border-border' : ''
-              } ${index < 3 ? 'lg:border-r lg:border-border' : ''}`}
+                index % 2 === 0 ? 'sm:border-e sm:border-border' : ''
+              } ${index < 3 ? 'lg:border-e lg:border-border' : ''}`}
             >
               <h3 className="text-base font-semibold tracking-tight text-foreground">
                 {item.title}

@@ -1,7 +1,9 @@
 import { ArrowDown } from 'lucide-react';
-import { copy } from '../copy/fr';
+import { useLocale } from '../lib/LocaleContext';
 
 export default function Hero() {
+  const { copy } = useLocale();
+
   return (
     <section
       id="top"

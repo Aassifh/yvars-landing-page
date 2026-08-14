@@ -1,7 +1,8 @@
-import { copy } from '../copy/fr';
+import { useLocale } from '../lib/LocaleContext';
 import SectionHeading from './SectionHeading';
 
 export default function Audience() {
+  const { copy } = useLocale();
   return (
     <section id="pour-qui" className="reveal scroll-mt-28 border-y border-border bg-white py-20 lg:py-28">
       <div className="page-shell">
