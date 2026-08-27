@@ -23,7 +23,7 @@ export default function App() {
         {copy.a11y.skip}
       </a>
       <Nav />
-      <div className="relative z-10 pb-[calc(5.75rem+env(safe-area-inset-bottom))] md:pb-0">
+      <div id="top" className="relative z-10 pb-[calc(5.75rem+env(safe-area-inset-bottom))] md:pb-0">
         <main>
           <Hero />
           <ProductStory />

@@ -2,6 +2,7 @@ import { useEffect, useId, useRef, useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { useActiveSection } from '../lib/useActiveSection';
 import { useLocale } from '../lib/LocaleContext';
+import { homeHref, panelHref, sectionHref } from '../lib/site';
 import LangSwitcher from './LangSwitcher';
 import Logo from './Logo';
 
@@ -14,11 +15,11 @@ export default function Nav() {
   const buttonRef = useRef<HTMLButtonElement>(null);
 
   const links = [
-    { href: '#produit', id: 'produit', label: copy.nav.product },
-    { href: '#cas-usage', id: 'cas-usage', label: copy.nav.useCases },
-    { href: '#pour-qui', id: 'pour-qui', label: copy.nav.audience },
-    { href: '#pourquoi', id: 'pourquoi', label: copy.nav.why },
-    { href: '#faq', id: 'faq', label: copy.nav.faq },
+    { href: sectionHref('#produit'), id: 'produit', label: copy.nav.product },
+    { href: sectionHref('#cas-usage'), id: 'cas-usage', label: copy.nav.useCases },
+    { href: sectionHref('#pour-qui'), id: 'pour-qui', label: copy.nav.audience },
+    { href: sectionHref('#pourquoi'), id: 'pourquoi', label: copy.nav.why },
+    { href: sectionHref('#faq'), id: 'faq', label: copy.nav.faq },
   ] as const;
 
   useEffect(() => {
@@ -53,7 +54,7 @@ export default function Nav() {
         }`}
       >
         <a
-          href="#top"
+          href={homeHref()}
           className="flex shrink-0 cursor-pointer items-center gap-2.5"
           aria-label={copy.a11y.home}
         >
@@ -90,7 +91,13 @@ export default function Nav() {
           <div className="hidden lg:block">
             <LangSwitcher />
           </div>
-          <a href="#contact" className="btn-primary hidden lg:inline-flex">
+          <a
+            href={panelHref()}
+            className="btn-ghost hidden min-h-11 px-3 text-sm lg:inline-flex"
+          >
+            {copy.nav.participate}
+          </a>
+          <a href={sectionHref('#contact')} className="btn-primary hidden lg:inline-flex">
             {copy.nav.cta}
           </a>
           <button
@@ -124,7 +131,14 @@ export default function Nav() {
               </a>
             ))}
             <LangSwitcher stacked onPick={() => setOpen(false)} />
-            <a href="#contact" className="btn-primary mt-1 w-full" onClick={() => setOpen(false)}>
+            <a
+              href={panelHref()}
+              className="min-h-11 cursor-pointer rounded-xl px-3 py-3 text-sm font-medium text-foreground transition-colors duration-200 hover:bg-accent hover:text-primary"
+              onClick={() => setOpen(false)}
+            >
+              {copy.nav.participate}
+            </a>
+            <a href={sectionHref('#contact')} className="btn-primary mt-1 w-full" onClick={() => setOpen(false)}>
               {copy.nav.cta}
             </a>
           </nav>

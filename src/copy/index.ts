@@ -12,6 +12,9 @@ export const dictionaries: Record<Locale, Copy> = { fr, en, ar };
 export const CONTACT_EMAIL =
   import.meta.env.VITE_CONTACT_EMAIL?.trim() || 'contact@yvars.io';
 
+export const PANEL_EMAIL =
+  import.meta.env.VITE_PANEL_EMAIL?.trim() || CONTACT_EMAIL;
+
 export function isLocale(value: string | null | undefined): value is Locale {
   return value === 'fr' || value === 'en' || value === 'ar';
 }

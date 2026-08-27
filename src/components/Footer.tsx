@@ -1,15 +1,17 @@
 import { useLocale } from '../lib/LocaleContext';
+import { homeHref, panelHref, sectionHref } from '../lib/site';
 import Logo from './Logo';
 
 export default function Footer() {
   const { copy } = useLocale();
   const links = [
-    { href: '#produit', label: copy.nav.product },
-    { href: '#cas-usage', label: copy.nav.useCases },
-    { href: '#pour-qui', label: copy.nav.audience },
-    { href: '#pourquoi', label: copy.nav.why },
-    { href: '#faq', label: copy.nav.faq },
-    { href: '#contact', label: copy.nav.cta },
+    { href: sectionHref('#produit'), label: copy.nav.product },
+    { href: sectionHref('#cas-usage'), label: copy.nav.useCases },
+    { href: sectionHref('#pour-qui'), label: copy.nav.audience },
+    { href: sectionHref('#pourquoi'), label: copy.nav.why },
+    { href: sectionHref('#faq'), label: copy.nav.faq },
+    { href: panelHref(), label: copy.nav.participate },
+    { href: sectionHref('#contact'), label: copy.nav.cta },
   ] as const;
 
   return (
@@ -37,7 +39,7 @@ export default function Footer() {
       <div className="page-shell mt-8 flex items-center justify-between gap-4">
         <p className="text-xs text-muted">{copy.footer.copyright}</p>
         <a
-          href="#top"
+          href={homeHref()}
           className="cursor-pointer text-xs font-medium text-muted transition-colors duration-200 hover:text-foreground"
         >
           {copy.footer.top}

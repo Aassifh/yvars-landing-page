@@ -6,6 +6,7 @@ import {
   type Copy,
   type Locale,
 } from '../copy';
+import { isPanelPage } from './site';
 
 type LocaleContextValue = {
   locale: Locale;
@@ -23,9 +24,14 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
     const root = document.documentElement;
     root.lang = locale;
     root.dir = locale === 'ar' ? 'rtl' : 'ltr';
-    document.title = copy.meta.title;
+    document.title = isPanelPage() ? copy.panel.meta.title : copy.meta.title;
     const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute('content', copy.meta.description);
+    if (meta) {
+      meta.setAttribute(
+        'content',
+        isPanelPage() ? copy.panel.meta.description : copy.meta.description,
+      );
+    }
   }, [locale, copy]);
 
   const setLocale = (next: Locale) => {

@@ -15,7 +15,7 @@ npm install
 npm run dev
 ```
 
-Opens on [http://localhost:5174](http://localhost:5174).
+Opens on [http://localhost:5174](http://localhost:5174). Panel application: [http://localhost:5174/panel.html](http://localhost:5174/panel.html).
 
 Optional: copy `.env.example` to `.env` to set `VITE_CONTACT_EMAIL`.
 

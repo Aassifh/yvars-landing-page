@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useLocale } from '../lib/LocaleContext';
+import { sectionHref } from '../lib/site';
 
 export default function MobileCta() {
   const { copy } = useLocale();
@@ -24,7 +25,7 @@ export default function MobileCta() {
       }`}
       style={{ paddingBottom: 'max(0.75rem, env(safe-area-inset-bottom))' }}
     >
-      <a href="#contact" className="btn-primary w-full">
+      <a href={sectionHref('#contact')} className="btn-primary w-full">
         {copy.nav.cta}
       </a>
     </div>
