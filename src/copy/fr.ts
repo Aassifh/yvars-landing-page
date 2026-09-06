@@ -18,6 +18,7 @@ export const fr = {
     audience: 'Pour qui',
     why: 'Pourquoi YVARS',
     faq: 'FAQ',
+    about: 'À propos',
     cta: 'Demander une démo',
     participate: 'Participer',
     openMenu: 'Ouvrir le menu',
@@ -262,6 +263,42 @@ export const fr = {
         a: 'Demandez une démo. Nous revenons vers vous pour caler un échange autour de votre prochaine étude : question, langues, type de répondants.',
       },
     ],
+  },
+  about: {
+    eyebrow: 'À propos',
+    title: 'L’équipe derrière YVARS',
+    subtitle:
+      'Deux fondateurs, une même obsession : faire entendre ce que disent vraiment les clients, assez vite pour encore décider.',
+    linkedinLabel: 'LinkedIn',
+    people: [
+      {
+        name: 'Ghali Amrani',
+        role: 'CEO',
+        bio: 'Ghali porte la vision produit et commerciale de YVARS, ainsi que le pilotage financier et la gestion. Il aligne les études sur les décisions métier, du brief à l’insight actionnable.',
+        photo: '/team-ghali.png',
+        linkedin: 'https://www.linkedin.com/in/ghali-el-amrani-687171157/',
+      },
+      {
+        name: 'Hamza Aassif',
+        role: 'CTO',
+        bio: 'Hamza construit la plateforme : entretiens vocaux adaptatifs, espace d’insights et Intelligence Lab. La tech au service d’une matière encore vivante.',
+        photo: '/team-hamza.jpg?v=2',
+        linkedin: 'https://www.linkedin.com/in/hamzaaassif/',
+      },
+    ],
+    sales: {
+      name: 'Edouard Dellis',
+      role: 'Sales · Paris',
+      bio: 'Basé à Paris, Edouard accompagne les équipes insights et instituts sur leurs prochaines études : brief, déploiement, suivi.',
+      email: 'e.dellis@yvars.io',
+      phone: '+33671290783',
+      phoneDisplay: '+33 6 71 29 07 83',
+    },
+    presence: {
+      eyebrow: 'Présence',
+      title: 'Casablanca et Paris',
+      body: 'Nos équipes tech construisent YVARS entre Casablanca et Paris : produit, entretiens vocaux et Intelligence Lab, dans le même rythme.',
+    },
   },
   contact: {
     eyebrow: 'Démo',

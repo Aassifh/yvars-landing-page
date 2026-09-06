@@ -6,6 +6,7 @@ import Audience from './components/Audience';
 import Workspace from './components/Workspace';
 import Why from './components/Why';
 import Faq from './components/Faq';
+import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import MobileCta from './components/MobileCta';
@@ -32,6 +33,7 @@ export default function App() {
           <Workspace />
           <Why />
           <Faq />
+          <About />
           <Contact />
         </main>
         <Footer />

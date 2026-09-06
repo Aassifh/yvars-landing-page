@@ -20,6 +20,7 @@ export const en: Copy = {
     audience: 'Who it is for',
     why: 'Why YVARS',
     faq: 'FAQ',
+    about: 'About',
     cta: 'Request a demo',
     participate: 'Take part',
     openMenu: 'Open menu',
@@ -264,6 +265,42 @@ export const en: Copy = {
         a: 'Request a demo. We come back to you to set a conversation around your next study: question, languages, type of respondents.',
       },
     ],
+  },
+  about: {
+    eyebrow: 'About',
+    title: 'The team behind YVARS',
+    subtitle:
+      'Two founders, one obsession: hear what customers really say, fast enough to still act on it.',
+    linkedinLabel: 'LinkedIn',
+    people: [
+      {
+        name: 'Ghali Amrani',
+        role: 'CEO',
+        bio: 'Ghali drives YVARS’ product and commercial vision, plus financial oversight and management. He keeps studies tied to business decisions, from brief to actionable insight.',
+        photo: '/team-ghali.png',
+        linkedin: 'https://www.linkedin.com/in/ghali-el-amrani-687171157/',
+      },
+      {
+        name: 'Hamza Aassif',
+        role: 'CTO',
+        bio: 'Hamza builds the platform: adaptive voice interviews, the insights workspace, and the Intelligence Lab. Tech in service of living research matter.',
+        photo: '/team-hamza.jpg?v=2',
+        linkedin: 'https://www.linkedin.com/in/hamzaaassif/',
+      },
+    ],
+    sales: {
+      name: 'Edouard Dellis',
+      role: 'Sales · Paris',
+      bio: 'Based in Paris, Edouard supports insights teams and institutes on their next studies: brief, rollout, and follow-up.',
+      email: 'e.dellis@yvars.io',
+      phone: '+33671290783',
+      phoneDisplay: '+33 6 71 29 07 83',
+    },
+    presence: {
+      eyebrow: 'Presence',
+      title: 'Casablanca and Paris',
+      body: 'Our tech teams build YVARS between Casablanca and Paris: product, voice interviews, and the Intelligence Lab, at the same pace.',
+    },
   },
   contact: {
     eyebrow: 'Demo',

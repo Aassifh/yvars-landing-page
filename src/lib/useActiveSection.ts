@@ -1,6 +1,14 @@
 import { useEffect, useState } from 'react';
 
-const SECTION_IDS = ['produit', 'cas-usage', 'pour-qui', 'pourquoi', 'faq', 'contact'] as const;
+const SECTION_IDS = [
+  'produit',
+  'cas-usage',
+  'pour-qui',
+  'pourquoi',
+  'faq',
+  'a-propos',
+  'contact',
+] as const;
 
 export function useActiveSection() {
   const [active, setActive] = useState<string | null>(null);

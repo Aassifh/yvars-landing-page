@@ -20,6 +20,7 @@ export const ar: Copy = {
     audience: 'لمن',
     why: 'لماذا YVARS',
     faq: 'الأسئلة الشائعة',
+    about: 'من نحن',
     cta: 'طلب عرض',
     participate: 'المشاركة',
     openMenu: 'فتح القائمة',
@@ -264,6 +265,42 @@ export const ar: Copy = {
         a: 'اطلبوا عرضًا. نعود إليكم لضبط حديث حول دراستكم المقبلة: السؤال، اللغات، نوع المجيبين.',
       },
     ],
+  },
+  about: {
+    eyebrow: 'من نحن',
+    title: 'الفريق وراء YVARS',
+    subtitle:
+      'مؤسسان، وهوس واحد: سماع ما يقوله العملاء حقًا، بسرعة كافية لاتخاذ القرار.',
+    linkedinLabel: 'LinkedIn',
+    people: [
+      {
+        name: 'Ghali Amrani',
+        role: 'CEO',
+        bio: 'يقود غالي رؤية المنتج والتجارة في YVARS، إضافةً إلى الإشراف المالي والإدارة. يربط الدراسات بقرارات الأعمال، من الموجز إلى الرؤية القابلة للتنفيذ.',
+        photo: '/team-ghali.png',
+        linkedin: 'https://www.linkedin.com/in/ghali-el-amrani-687171157/',
+      },
+      {
+        name: 'Hamza Aassif',
+        role: 'CTO',
+        bio: 'يبني حمزة المنصة: مقابلات صوتية متكيّفة، مساحة الرؤى، وIntelligence Lab. التقنية في خدمة مادة بحث ما زالت حيّة.',
+        photo: '/team-hamza.jpg?v=2',
+        linkedin: 'https://www.linkedin.com/in/hamzaaassif/',
+      },
+    ],
+    sales: {
+      name: 'Edouard Dellis',
+      role: 'المبيعات · باريس',
+      bio: 'مقيم في باريس، يرافق إدوارد فرق الرؤى والمعاهد في دراساتهم المقبلة: الموجز، النشر، والمتابعة.',
+      email: 'e.dellis@yvars.io',
+      phone: '+33671290783',
+      phoneDisplay: '+33 6 71 29 07 83',
+    },
+    presence: {
+      eyebrow: 'الحضور',
+      title: 'الدار البيضاء وباريس',
+      body: 'تبني فرقنا التقنية YVARS بين الدار البيضاء وباريس: المنتج، المقابلات الصوتية، وIntelligence Lab، بالإيقاع نفسه.',
+    },
   },
   contact: {
     eyebrow: 'عرض',

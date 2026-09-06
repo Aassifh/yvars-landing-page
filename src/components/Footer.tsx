@@ -10,6 +10,7 @@ export default function Footer() {
     { href: sectionHref('#pour-qui'), label: copy.nav.audience },
     { href: sectionHref('#pourquoi'), label: copy.nav.why },
     { href: sectionHref('#faq'), label: copy.nav.faq },
+    { href: sectionHref('#a-propos'), label: copy.nav.about },
     { href: panelHref(), label: copy.nav.participate },
     { href: sectionHref('#contact'), label: copy.nav.cta },
   ] as const;

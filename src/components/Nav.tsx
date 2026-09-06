@@ -20,6 +20,7 @@ export default function Nav() {
     { href: sectionHref('#pour-qui'), id: 'pour-qui', label: copy.nav.audience },
     { href: sectionHref('#pourquoi'), id: 'pourquoi', label: copy.nav.why },
     { href: sectionHref('#faq'), id: 'faq', label: copy.nav.faq },
+    { href: sectionHref('#a-propos'), id: 'a-propos', label: copy.nav.about },
   ] as const;
 
   useEffect(() => {
