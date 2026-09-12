@@ -290,6 +290,7 @@ export const fr = {
       name: 'Edouard Dellis',
       role: 'Sales · Paris',
       bio: 'Basé à Paris, Edouard accompagne les équipes insights et instituts sur leurs prochaines études : brief, déploiement, suivi.',
+      photo: '/team-edouard.jpg',
       email: 'e.dellis@yvars.io',
       phone: '+33671290783',
       phoneDisplay: '+33 6 71 29 07 83',

@@ -15,7 +15,7 @@ export default function About() {
   const sales = copy.about.sales;
 
   return (
-    <section id="a-propos" className="reveal scroll-mt-28 border-y border-border bg-white py-20 lg:py-28">
+    <section id="a-propos" className="reveal scroll-mt-28 border-y border-border bg-white py-14 lg:py-20">
       <div className="page-shell">
         <SectionHeading
           eyebrow={copy.about.eyebrow}
@@ -23,10 +23,10 @@ export default function About() {
           subtitle={copy.about.subtitle}
         />
 
-        <ul className="mt-12 grid gap-12 sm:grid-cols-2 sm:gap-10 lg:gap-16">
+        <ul className="mt-10 grid gap-8 sm:grid-cols-2 sm:gap-6 lg:gap-8">
           {copy.about.people.map((person) => (
-            <li key={person.name} className="flex flex-col gap-5">
-              <div className="aspect-square w-full max-w-[17.5rem] overflow-hidden rounded-2xl bg-slate-100">
+            <li key={person.name} className="flex flex-col gap-4">
+              <div className="aspect-square w-full overflow-hidden rounded-2xl bg-slate-100">
                 <img
                   src={person.photo}
                   alt={person.name}
@@ -41,10 +41,12 @@ export default function About() {
                 <p className="text-xs font-semibold tracking-[0.14em] text-primary uppercase">
                   {person.role}
                 </p>
-                <h3 className="mt-2 text-xl font-semibold tracking-tight text-foreground">
+                <h3 className="mt-2 text-xl font-semibold tracking-tight text-foreground sm:text-2xl">
                   {person.name}
                 </h3>
-                <p className="mt-3 max-w-md text-base leading-relaxed text-muted">{person.bio}</p>
+                <p className="mt-3 text-base leading-relaxed text-muted sm:text-lg sm:leading-[1.7]">
+                  {person.bio}
+                </p>
                 <a
                   href={person.linkedin}
                   target="_blank"
@@ -59,28 +61,45 @@ export default function About() {
           ))}
         </ul>
 
-        <div className="mt-16 grid gap-10 border-t border-border pt-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:gap-16">
-          <div>
-            <p className="text-xs font-semibold tracking-[0.14em] text-primary uppercase">
-              {sales.role}
-            </p>
-            <h3 className="mt-2 text-xl font-semibold tracking-tight text-foreground">{sales.name}</h3>
-            <p className="mt-3 max-w-md text-base leading-relaxed text-muted">{sales.bio}</p>
-            <div className="mt-4 flex flex-col gap-1">
-              <a
-                href={`mailto:${sales.email}`}
-                className="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-foreground transition-colors duration-200 hover:text-primary"
-              >
-                <Mail className="size-4" aria-hidden />
-                {sales.email}
-              </a>
-              <a
-                href={`tel:${sales.phone}`}
-                className="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-foreground transition-colors duration-200 hover:text-primary"
-              >
-                <Phone className="size-4" aria-hidden />
-                {sales.phoneDisplay}
-              </a>
+        <div className="mt-10 grid gap-8 border-t border-border pt-8 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)] lg:gap-8">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-4">
+            <div className="aspect-square w-full max-w-[12rem] shrink-0 overflow-hidden rounded-2xl bg-slate-100 sm:max-w-[13rem]">
+              <img
+                src={sales.photo}
+                alt={sales.name}
+                width={480}
+                height={480}
+                className="size-full object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div className="min-w-0 flex-1">
+              <p className="text-xs font-semibold tracking-[0.14em] text-primary uppercase">
+                {sales.role}
+              </p>
+              <h3 className="mt-2 text-xl font-semibold tracking-tight text-foreground sm:text-2xl">
+                {sales.name}
+              </h3>
+              <p className="mt-3 text-base leading-relaxed text-muted sm:text-lg sm:leading-[1.7]">
+                {sales.bio}
+              </p>
+              <div className="mt-4 flex flex-col gap-1">
+                <a
+                  href={`mailto:${sales.email}`}
+                  className="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-foreground transition-colors duration-200 hover:text-primary"
+                >
+                  <Mail className="size-4" aria-hidden />
+                  {sales.email}
+                </a>
+                <a
+                  href={`tel:${sales.phone}`}
+                  className="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-foreground transition-colors duration-200 hover:text-primary"
+                >
+                  <Phone className="size-4" aria-hidden />
+                  {sales.phoneDisplay}
+                </a>
+              </div>
             </div>
           </div>
 
@@ -88,10 +107,10 @@ export default function About() {
             <p className="text-xs font-semibold tracking-[0.14em] text-primary uppercase">
               {copy.about.presence.eyebrow}
             </p>
-            <h3 className="mt-2 text-xl font-semibold tracking-tight text-foreground">
+            <h3 className="mt-2 text-xl font-semibold tracking-tight text-foreground sm:text-2xl">
               {copy.about.presence.title}
             </h3>
-            <p className="mt-3 max-w-md text-base leading-relaxed text-muted">
+            <p className="mt-3 text-base leading-relaxed text-muted sm:text-lg sm:leading-[1.7]">
               {copy.about.presence.body}
             </p>
           </div>

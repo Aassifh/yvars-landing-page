@@ -7,7 +7,7 @@ const icons = [Package, Store, Smartphone, Shield, Tag, Lightbulb];
 export default function UseCases() {
   const { copy } = useLocale();
   return (
-    <section id="cas-usage" className="reveal scroll-mt-28 py-20 lg:py-28">
+    <section id="cas-usage" className="reveal scroll-mt-28 py-14 lg:py-20">
       <div className="page-shell">
         <SectionHeading
           eyebrow={copy.useCases.eyebrow}

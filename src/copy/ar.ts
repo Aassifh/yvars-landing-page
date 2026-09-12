@@ -292,6 +292,7 @@ export const ar: Copy = {
       name: 'Edouard Dellis',
       role: 'المبيعات · باريس',
       bio: 'مقيم في باريس، يرافق إدوارد فرق الرؤى والمعاهد في دراساتهم المقبلة: الموجز، النشر، والمتابعة.',
+      photo: '/team-edouard.jpg',
       email: 'e.dellis@yvars.io',
       phone: '+33671290783',
       phoneDisplay: '+33 6 71 29 07 83',

@@ -40,9 +40,9 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="reveal scroll-mt-28 border-t border-border bg-white py-20 lg:py-28"
+      className="reveal scroll-mt-28 border-t border-border bg-white py-14 lg:py-20"
     >
-      <div className="page-shell grid gap-12 lg:grid-cols-2 lg:gap-16">
+      <div className="page-shell grid gap-8 lg:grid-cols-2 lg:gap-10">
         <div>
           <SectionHeading
             eyebrow={copy.contact.eyebrow}

@@ -4,7 +4,7 @@ import SectionHeading from './SectionHeading';
 export default function Why() {
   const { copy } = useLocale();
   return (
-    <section id="pourquoi" className="reveal scroll-mt-28 py-20 lg:py-28">
+    <section id="pourquoi" className="reveal scroll-mt-28 py-14 lg:py-20">
       <div className="page-shell">
         <SectionHeading eyebrow={copy.why.eyebrow} title={copy.why.title} subtitle={copy.why.lead} />
 

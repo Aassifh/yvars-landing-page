@@ -292,6 +292,7 @@ export const en: Copy = {
       name: 'Edouard Dellis',
       role: 'Sales · Paris',
       bio: 'Based in Paris, Edouard supports insights teams and institutes on their next studies: brief, rollout, and follow-up.',
+      photo: '/team-edouard.jpg',
       email: 'e.dellis@yvars.io',
       phone: '+33671290783',
       phoneDisplay: '+33 6 71 29 07 83',

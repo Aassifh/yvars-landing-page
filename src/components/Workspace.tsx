@@ -4,7 +4,7 @@ import SectionHeading from './SectionHeading';
 export default function Workspace() {
   const { copy } = useLocale();
   return (
-    <section id="espace" className="reveal scroll-mt-28 py-20 lg:py-28">
+    <section id="espace" className="reveal scroll-mt-28 py-14 lg:py-20">
       <div className="page-shell">
         <SectionHeading
           eyebrow={copy.workspace.eyebrow}

@@ -4,7 +4,7 @@ import SectionHeading from './SectionHeading';
 export default function Audience() {
   const { copy } = useLocale();
   return (
-    <section id="pour-qui" className="reveal scroll-mt-28 border-y border-border bg-white py-20 lg:py-28">
+    <section id="pour-qui" className="reveal scroll-mt-28 border-y border-border bg-white py-14 lg:py-20">
       <div className="page-shell">
         <SectionHeading
           eyebrow={copy.audience.eyebrow}

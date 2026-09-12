@@ -70,7 +70,7 @@ export default function ProductStory() {
           subtitle={copy.story.subtitle}
         />
 
-        <div className="mt-10 lg:mt-14 lg:grid lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:items-start lg:gap-16 xl:gap-20">
+        <div className="mt-10 lg:mt-12 lg:grid lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:items-start lg:gap-10 xl:gap-12">
           <div
             ref={canvasWrapRef}
             className="sticky top-[4.75rem] z-20 mb-8 self-start bg-background pb-3 sm:top-[5.25rem] lg:col-start-2 lg:row-start-1 lg:mb-0 lg:bg-transparent lg:pb-0 lg:top-24"

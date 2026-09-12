@@ -5,7 +5,7 @@ import SectionHeading from './SectionHeading';
 export default function Faq() {
   const { copy } = useLocale();
   return (
-    <section id="faq" className="reveal scroll-mt-28 py-20 lg:py-28">
+    <section id="faq" className="reveal scroll-mt-28 py-14 lg:py-20">
       <div className="page-shell max-w-3xl">
         <SectionHeading eyebrow={copy.faq.eyebrow} title={copy.faq.title} tight />
 
