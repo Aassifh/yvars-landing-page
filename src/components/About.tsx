@@ -26,12 +26,12 @@ export default function About() {
         <ul className="mt-10 grid gap-8 sm:grid-cols-2 sm:gap-6 lg:gap-8">
           {copy.about.people.map((person) => (
             <li key={person.name} className="flex flex-col gap-4">
-              <div className="aspect-square w-full overflow-hidden rounded-2xl bg-slate-100">
+              <div className="aspect-square w-full max-w-[12rem] overflow-hidden rounded-2xl bg-slate-100 sm:max-w-[13rem]">
                 <img
                   src={person.photo}
                   alt={person.name}
-                  width={560}
-                  height={560}
+                  width={480}
+                  height={480}
                   className="size-full object-cover"
                   loading="lazy"
                   decoding="async"

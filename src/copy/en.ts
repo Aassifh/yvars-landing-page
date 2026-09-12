@@ -30,10 +30,11 @@ export const en: Copy = {
     eyebrow: 'Qualitative research platform',
     lines: ['Hear your customers.', 'See the market.', 'Act.'],
     subtitle:
-      'YVARS runs voice interviews that adapt in real time, then links those verbatims to competitive intelligence. You keep the study frame; you get material you can still interrogate.',
+      'YVARS runs voice interviews that adapt in real time, in French, English and Arabic, then links those verbatims to competitive intelligence: observed prices, private label, shelf gaps. You keep the study frame; you get living material you can still cross, filter and interrogate to decide faster, without waiting for a frozen deck.',
     languages: 'Studies run in French, English and Arabic.',
     cta: 'Request a demo',
     secondary: 'See the product',
+    reportAlt: 'Preview of a YVARS study report',
   },
   story: {
     eyebrow: 'The product',

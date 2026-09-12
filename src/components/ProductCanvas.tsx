@@ -8,15 +8,20 @@ export type { StoryBeatId };
 type Props = {
   beat: StoryBeatId;
   live?: boolean;
+  compact?: boolean;
 };
 
-export default function ProductCanvas({ beat, live = false }: Props) {
+export default function ProductCanvas({ beat, live = false, compact = false }: Props) {
   const { copy } = useLocale();
   const { study, live: liveLabel, canvas } = copy.story;
   const active = copy.story.beats.find((item) => item.id === beat) ?? copy.story.beats[0];
 
   return (
-    <div className="surface flex h-[15.5rem] w-full flex-col overflow-hidden sm:h-[17rem] lg:h-[22rem]">
+    <div
+      className={`surface flex w-full flex-col overflow-hidden ${
+        compact ? 'h-[14.5rem] sm:h-[16rem]' : 'h-[15.5rem] sm:h-[17rem] lg:h-[22rem]'
+      }`}
+    >
       <div className="flex shrink-0 items-center justify-between gap-3 border-b border-border px-4 py-3">
         <p className="truncate text-xs font-semibold tracking-wide text-muted uppercase">
           YVARS · {study}

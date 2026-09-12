@@ -28,10 +28,11 @@ export const fr = {
     eyebrow: 'Plateforme d’études qualitatives',
     lines: ['Entendez vos clients.', 'Voyez le marché.', 'Agissez.'],
     subtitle:
-      'YVARS conduit des entretiens vocaux qui s’adaptent en temps réel, puis relie ces verbatims à l’intelligence concurrentielle. Vous gardez le cadre de l’étude ; vous récupérez une matière que l’on peut encore interroger.',
+      'YVARS conduit des entretiens vocaux qui s’adaptent en temps réel, en français, anglais et arabe, puis relie ces verbatims à l’intelligence concurrentielle : prix observés, MDD, écarts de rayon. Vous gardez le cadre de l’étude ; vous récupérez une matière encore vivante, que l’on peut croiser, filtrer et interroger pour décider plus vite, sans attendre un deck figé.',
     languages: 'Études menées en français, anglais et arabe.',
     cta: 'Demander une démo',
     secondary: 'Voir le produit',
+    reportAlt: 'Aperçu d’un rapport d’étude YVARS',
   },
   story: {
     eyebrow: 'Le produit',
