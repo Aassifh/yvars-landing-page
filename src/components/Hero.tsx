@@ -1,5 +1,6 @@
 import { ArrowDown } from 'lucide-react';
 import { useLocale } from '../lib/LocaleContext';
+import HeroStudyCard from './HeroStudyCard';
 
 export default function Hero() {
   const { copy } = useLocale();
@@ -46,21 +47,7 @@ export default function Hero() {
         </div>
 
         <div className="relative w-full lg:justify-self-end">
-          <div className="surface relative overflow-hidden shadow-md ring-1 ring-border/70">
-            <img
-              src="/hero-report.png?v=3"
-              alt={copy.hero.reportAlt}
-              width={1200}
-              height={900}
-              className="aspect-[6/5] w-full object-cover object-top"
-              loading="eager"
-              decoding="async"
-            />
-            <div
-              aria-hidden
-              className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-white via-white/70 to-transparent"
-            />
-          </div>
+          <HeroStudyCard />
         </div>
       </div>
     </section>
