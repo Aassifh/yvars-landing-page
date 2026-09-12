@@ -2,7 +2,16 @@
 
 Standalone marketing site for YVARS (French, English, Arabic). Isolated from the product app: no login, no admin, no LiveKit.
 
-Live: [https://aassifh.github.io/yvars-landing-page/](https://aassifh.github.io/yvars-landing-page/) (GitHub Pages). Point a custom domain here from GoDaddy after DNS is set.
+Live: [https://yvars.io](https://yvars.io) (GitHub Pages + custom domain). Also serve `www.yvars.io` → redirect to the apex `https://yvars.io` so SEO does not split.
+
+SEO / GEO assets in `public/`: `robots.txt`, `sitemap.xml`, `llms.txt`, `llms-full.txt`, `og.png`.
+
+## Domain
+
+1. Point DNS for `yvars.io` and `www.yvars.io` at GitHub Pages (A / CNAME per GitHub docs).
+2. In the repo Pages settings, set custom domain to `yvars.io` and enable HTTPS.
+3. Prefer apex as canonical; configure `www` → `https://yvars.io` (DNS or Pages redirect).
+4. After go-live, run Lighthouse SEO on `/` and `/panel.html`, and confirm `/robots.txt`, `/sitemap.xml`, `/llms.txt`.
 
 Single CTA: request a demo (`#contact`). Locale: English browsers get English; everything else defaults to French. Arabic is chosen in the nav and remembered.
 

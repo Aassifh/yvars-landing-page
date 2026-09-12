@@ -1,0 +1,34 @@
+# YVARS
+
+> Voice qualitative research workspace: adaptive 1:1 voice interviews (French, English, Arabic) linked to competitive intelligence. A workspace for deciding, not a frozen deck.
+
+Canonical: https://yvars.io
+Also: https://www.yvars.io (redirects to apex)
+
+## Product
+
+- Adaptive voice interviews (not a text chatbot, not a fixed questionnaire)
+- Insights workspace: transcripts, axes, radar, insight chat
+- Intelligence Lab: verbatims next to observed shelf prices / gaps / private label
+- Clients bring respondents (own base / recruiter); optional paid panel for some briefs
+- Not a worldwide recruitment marketplace; not video interviews
+
+## Who it is for
+
+- Research institutes and independents
+- Insights / category / innovation teams
+- Retail and shopper teams
+
+## Languages
+
+French, English, Arabic (interview language = participant language)
+
+## Pages
+
+- [Home](https://yvars.io/): product, use cases, FAQ, contact / demo
+- [Panel](https://yvars.io/panel.html): apply to paid respondent pool
+- [Full brief for LLMs](https://yvars.io/llms-full.txt)
+
+## Contact
+
+Demo requests: contact@yvars.io (form opens mailto)

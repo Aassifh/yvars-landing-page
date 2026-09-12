@@ -4,7 +4,7 @@ export const en: Copy = {
   meta: {
     title: 'YVARS · Voice qualitative research and market intelligence',
     description:
-      'YVARS runs voice interviews in French, English and Arabic, then links those verbatims to competitive intelligence. A workspace for deciding, not a frozen deck.',
+      'YVARS runs adaptive voice interviews in French, English and Arabic, then crosses those verbatims with competitive intelligence. A workspace for deciding, not a frozen deck.',
   },
   a11y: {
     skip: 'Skip to content',
@@ -351,7 +351,7 @@ export const en: Copy = {
     meta: {
       title: 'YVARS · Take part in a study',
       description:
-        'Join the YVARS panel. If a brief matches, you do a paid voice interview. Applying does not guarantee a call.',
+        'Join the YVARS panel. If a brief matches your profile, you do a paid voice interview in French, English or Arabic.',
     },
     skip: 'Skip to the form',
     eyebrow: 'Panel',

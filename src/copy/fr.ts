@@ -2,7 +2,7 @@ export const fr = {
   meta: {
     title: 'YVARS · Études qualitatives vocales et intelligence de marché',
     description:
-      'YVARS mène des entretiens vocaux en français, anglais et arabe, puis relie ces verbatims à l’intelligence concurrentielle. Un espace de travail pour décider, pas un deck figé.',
+      'YVARS mène des entretiens vocaux adaptatifs en français, anglais et arabe, puis croise ces verbatims avec l’intelligence concurrentielle. Un espace de travail pour décider, pas un deck figé.',
   },
   a11y: {
     skip: 'Aller au contenu',
@@ -349,7 +349,7 @@ export const fr = {
     meta: {
       title: 'YVARS · Participer à une étude',
       description:
-        'Rejoignez le panel YVARS. Si un brief correspond, vous passez un entretien vocal rémunéré. Postuler ne garantit pas d’être appelé.',
+        'Rejoignez le panel YVARS. Si un brief correspond à votre profil, vous passez un entretien vocal rémunéré en français, anglais ou arabe.',
     },
     skip: 'Aller au formulaire',
     eyebrow: 'Panel',

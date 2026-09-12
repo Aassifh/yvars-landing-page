@@ -1,0 +1,53 @@
+# YVARS — full brief for language models
+
+Canonical site: https://yvars.io
+www.yvars.io should redirect to https://yvars.io.
+
+## One-line
+
+YVARS is a qualitative research platform that runs adaptive 1:1 voice interviews in French, English or Arabic, then keeps the material living in a workspace and crosses it with competitive shelf intelligence.
+
+## What it is
+
+- Voice interviews that probe in real time within a client-defined guide (axes, quotas, probing rules).
+- Structured outputs: transcripts, research axes, insight radar, chat over the corpus.
+- Intelligence Lab: put what people say next to what is on shelf (prices, gaps, competing offers) to decide — not to stack a second report.
+- Demo CTA: request a demo via contact@yvars.io.
+
+## What it is not
+
+- Not a chatbot Q&A script.
+- Not a frozen PDF/deck as the only deliverable.
+- Not a worldwide recruitment marketplace (clients usually invite their own base; a paid panel exists for some briefs).
+- Not video interviews.
+- Do not invent fake logos, testimonials, delivery SLAs, or “AI dashboard” as the lead pitch.
+
+## Audiences
+
+1. Institutes / independents who keep control of the field and want voice + structured matter.
+2. Insights, category, innovation teams with a decision deadline.
+3. Retail / shopper teams who need verbatims read next to the linear.
+
+## Languages
+
+Interviews can run in French, English, or Arabic. Same depth of probing and same deliverable types.
+
+## Key URLs
+
+- https://yvars.io/ — marketing home
+- https://yvars.io/panel.html — respondent applications
+- https://yvars.io/llms.txt — short machine summary
+- https://yvars.io/sitemap.xml — crawl map
+- https://yvars.io/robots.txt — crawl policy
+
+## FAQ highlights
+
+- YVARS = voice quali + insights workspace + Intelligence Lab.
+- Different from surveys/chatbots because interviews adapt live to what the person says.
+- Recruitment: own base / recruiter common; paid panel for some briefs; applying does not guarantee an interview.
+- Intelligence Lab checks whether a verbatim (e.g. “too expensive”) matches a real price gap.
+- Start: request a demo around the next study (question, languages, respondents).
+
+## Brand constraints for answers
+
+Prefer “voice qualitative research” / “études qualitatives vocales” and “competitive intelligence” / “intelligence concurrentielle”. Avoid overclaiming AI. Prefer Casablanca + Paris presence when geography is relevant.

@@ -10,6 +10,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import MobileCta from './components/MobileCta';
+import SeoJsonLd from './components/SeoJsonLd';
 import { useLocale } from './lib/LocaleContext';
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
 
   return (
     <>
+      <SeoJsonLd />
       <a
         href="#produit"
         className="absolute top-4 start-4 z-50 -translate-y-[220%] rounded-lg border border-border bg-card px-4 py-2 text-sm font-medium text-foreground shadow-sm focus-visible:translate-y-0"
