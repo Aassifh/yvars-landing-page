@@ -1,4 +1,3 @@
-import { Mail, Phone } from 'lucide-react';
 import { useLocale } from '../lib/LocaleContext';
 import SectionHeading from './SectionHeading';
 
@@ -12,7 +11,6 @@ function LinkedInIcon({ className }: { className?: string }) {
 
 export default function About() {
   const { copy } = useLocale();
-  const sales = copy.about.sales;
 
   return (
     <section id="a-propos" className="reveal scroll-mt-28 border-y border-border bg-white py-14 lg:py-20">
@@ -61,48 +59,7 @@ export default function About() {
           ))}
         </ul>
 
-        <div className="mt-10 grid gap-8 border-t border-border pt-8 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)] lg:gap-8">
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-4">
-            <div className="aspect-square w-full max-w-[12rem] shrink-0 overflow-hidden rounded-2xl bg-slate-100 sm:max-w-[13rem]">
-              <img
-                src={sales.photo}
-                alt={sales.name}
-                width={480}
-                height={480}
-                className="size-full object-cover"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-            <div className="min-w-0 flex-1">
-              <p className="text-xs font-semibold tracking-[0.14em] text-primary uppercase">
-                {sales.role}
-              </p>
-              <h3 className="mt-2 text-xl font-semibold tracking-tight text-foreground sm:text-2xl">
-                {sales.name}
-              </h3>
-              <p className="mt-3 text-base leading-relaxed text-muted sm:text-lg sm:leading-[1.7]">
-                {sales.bio}
-              </p>
-              <div className="mt-4 flex flex-col gap-1">
-                <a
-                  href={`mailto:${sales.email}`}
-                  className="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-foreground transition-colors duration-200 hover:text-primary"
-                >
-                  <Mail className="size-4" aria-hidden />
-                  {sales.email}
-                </a>
-                <a
-                  href={`tel:${sales.phone}`}
-                  className="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-foreground transition-colors duration-200 hover:text-primary"
-                >
-                  <Phone className="size-4" aria-hidden />
-                  {sales.phoneDisplay}
-                </a>
-              </div>
-            </div>
-          </div>
-
+        <div className="mt-10 border-t border-border pt-8">
           <div>
             <p className="text-xs font-semibold tracking-[0.14em] text-primary uppercase">
               {copy.about.presence.eyebrow}
